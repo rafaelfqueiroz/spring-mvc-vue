@@ -1,0 +1,11 @@
+{
+  "name": "SpringMvcVue",
+  "private": true,
+  "dependencies": {
+    "vue": "^2.5.16",
+    "axios": "^0.18.0",
+    "vue-the-mask": "^0.11.1",
+    "vue2-datepicker": "^2.4.1",
+    "vue-js-modal": "1.3.26"
+  }
+}

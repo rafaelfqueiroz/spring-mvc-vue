@@ -1,0 +1,20 @@
+stages:
+  - clean
+  - test
+  - package
+clean:
+  stage: clean
+  script:
+  - mvn clean
+test:
+  stage: test
+  script:
+  - mvn test
+package:
+  stage: package
+  script:
+  - npm install --prefix src/main/resources/static
+  - mvn install
+  - sudo mv /home/gitlab-runner/builds/aef3e3fa/0/plataforma-dados-clinicos/sigsaude/target/sigsaude.war /opt/tomcat/webapps/
+  only:
+  - desenvolvimento
